@@ -17,9 +17,15 @@
         will learn more about callback functions in a later chapter).
         <br> The following example demonstrates the speed parameter with hide():
     </p>
-
     <button id="hide">Hide</button>
     <button id="show">Show</button>
+
+    <h2>jQuery toggle()</h2>
+    <p>
+        The optional speed parameter can take the following values: "slow", "fast", or milliseconds.
+        <br>
+        The optional callback parameter is a function to be executed after toggle() completes.
+    </p>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -29,6 +35,9 @@
         });
         $("#show").click(function () {
             $("p").show(500);
+        });
+        $("button").click(function () {
+            $("p").toggle();
         });
     });
 </script>
