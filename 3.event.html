@@ -1,0 +1,133 @@
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h2>What are Events?</h2>
+    <p>
+        All the different visitors' actions that a web page can respond to are called events.
+        An event represents the precise moment when something happens.
+        <br>
+        Examples:
+        moving a mouse over an element
+        selecting a radio button
+        clicking on an element
+    </p>
+    <h2>Event list</h2>
+    <img src="./img/event-list.png" alt="">
+    <h2>click</h2>
+    <p>The click() method attaches an event handler function to an HTML element.
+        <br>
+        The function is executed when the user clicks on the HTML element.
+        <br>
+        The following example says: When a click event fires on a p element; hide the current p element:
+    </p>
+    <h2>dblclick</h2>
+    <p>
+        The dblclick() method attaches an event handler function to an HTML element.
+        <br>
+        The function is executed when the user double-clicks on the HTML element:
+    </p>
+    <h2>mouseenter(p1)</h2>
+    <p id="p1">
+        The mouseenter() method attaches an event handler function to an HTML element.
+        <br>
+        The function is executed when the mouse pointer enters the HTML element:
+    </p>
+    <h2>mouseleave</h2>
+    <p>
+        The mouseleave() method attaches an event handler function to an HTML element.
+        <br>
+        The function is executed when the mouse pointer leaves the HTML element:
+    </p>
+    <h2>mousedown</h2>
+    <p>
+        The mousedown() method attaches an event handler function to an HTML element.
+        <br>
+        The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over
+        the HTML element:
+    </p>
+    <h2>mouseup</h2>
+    <p>
+        The mouseup() method attaches an event handler function to an HTML element.
+        <br>
+        The function is executed, when the left, middle or right mouse button is released, while the mouse is over the
+        HTML element:
+    </p>
+    <h2>hover</h2>
+    <p>
+        The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
+        <br>
+        The first function is executed when the mouse enters the HTML element, and the second function is executed when
+        the mouse leaves the HTML element:
+    </p>
+    <h2>focus</h2>
+    <p>
+        The focus() method attaches an event handler function to an HTML form field.
+        <br>
+        The function is executed when the form field gets focus:<br>
+        Name: <input type="text" name="fullname"><br>
+        Email: <input type="text" name="email">
+    </p>
+    <h2>The on() Method</h2>
+    <p>
+        The on() method attaches one or more event handlers for the selected elements.
+        <br>
+        Attach a click event to a
+        p element:
+    </p>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    // $("p").click(function () {
+    //     $(this).hide()
+    // });
+
+
+    // $("p").dblclick(function () {
+    //     $(this).hide();
+    // });
+
+
+    // $("#p1").mouseenter(function () {
+    //     alert("You entered p1!");
+    // });
+
+
+    // $("#p1").mouseleave(function () {
+    //     alert("Bye! You now leave p1!");
+    // });
+
+
+    // $("#p1").mousedown(function () {
+    //     alert("Mouse down over p1!");
+    // });
+
+
+    // $("#p1").mouseup(function () {
+    //     alert("Mouse up over p1!");
+    // });
+
+
+    // $("input").focus(function () {
+    //     $(this).css("background-color", "yellow");
+    // });
+
+
+    // $("input").blur(function () {
+    //     $(this).css("background-color", "green");
+    // });
+
+
+    $("p").on("click", function () {
+        $(this).hide();
+    });
+</script>
+
+</html>
