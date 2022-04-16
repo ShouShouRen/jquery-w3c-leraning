@@ -26,6 +26,7 @@
         <br>
         The optional callback parameter is a function to be executed after toggle() completes.
     </p>
+    <button id="a1">Toggle between hiding and showing the paragraphs</button>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -36,7 +37,7 @@
         $("#show").click(function () {
             $("p").show(500);
         });
-        $("button").click(function () {
+        $("#a1").click(function () {
             $("p").toggle();
         });
     });
