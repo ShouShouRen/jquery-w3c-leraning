@@ -8,7 +8,15 @@
 </head>
 
 <body>
+    <h2>jQuery hide() and show()</h2>
     <p>If you click on the "Hide" button, I will disappear.</p>
+    <p>The optional speed parameter specifies the speed of the hiding/showing, and can take the following values:
+        "slow", "fast", or milliseconds.
+        <br>
+        The optional callback parameter is a function to be executed after the hide() or show() method completes (you
+        will learn more about callback functions in a later chapter).
+        <br> The following example demonstrates the speed parameter with hide():
+    </p>
 
     <button id="hide">Hide</button>
     <button id="show">Show</button>
@@ -17,10 +25,10 @@
 <script>
     $(document).ready(function () {
         $("#hide").click(function () {
-            $("p").hide();
+            $("p").hide(500);
         });
         $("#show").click(function () {
-            $("p").show();
+            $("p").show(500);
         });
     });
 </script>
