@@ -18,6 +18,31 @@
             padding: 50px;
             display: none;
         }
+
+        #panel-2,
+        #flip-2 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel-2 {
+            padding: 50px;
+        }
+
+        #panel-3,
+        #flip-3 {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel-3 {
+            padding: 50px;
+            display: none;
+        }
     </style>
 </head>
 
@@ -40,7 +65,9 @@
     <div id="flip">Click to slide down panel</div>
     <div id="panel">Hello World</div>
     <h2>jQuery slideUp() Method</h2>
-    <p>The jQuery slideUp() method is used to slide up an element.</p>
+    <p>
+        The jQuery slideUp() method is used to slide up an element.
+    </p>
     <p>
         The optional speed parameter specifies the duration of the effect. It can take the following values: "slow",
         "fast", or milliseconds.
@@ -49,6 +76,25 @@
         <br>
         The following example demonstrates the slideUp() method:
     </p>
+    <div id="flip-2">Click to slide down panel</div>
+    <div id="panel-2">Hello World</div>
+    <h2>jQuery slideToggle() Method</h2>
+    <p>
+        The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+        <br>
+        If the elements have been slid down, slideToggle() will slide them up.
+        <br>
+        If the elements have been slid up, slideToggle() will slide them down.
+    </p>
+    <p>
+        The optional speed parameter can take the following values: "slow", "fast", milliseconds.
+        <br>
+        The optional callback parameter is a function to be executed after the sliding completes.
+        <br>
+        The following example demonstrates the slideToggle() method:
+    </p>
+    <div id="flip-3">Click to slide down panel</div>
+    <div id="panel-3">Hello World</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -56,6 +102,12 @@
         $("#flip").click(function () {
             $("#panel").slideDown("show");
         })
+        $("#flip-2").click(function () {
+            $("#panel-2").slideUp("slow");
+        });
+        $("#flip-3").click(function () {
+            $("#panel-3").slideToggle("slow");
+        });
     });
 </script>
 
