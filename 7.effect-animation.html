@@ -21,14 +21,64 @@
         The following example demonstrates a simple use of the animate() method; it moves a
         div element to the right, until it has reached a left property of 250px:
     </p>
+    <h2>jQuery animate() - Manipulate Multiple Properties</h2>
     <button>Start Animation</button>
-    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <div class="op" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <br>
+    <div id="button" style="margin-top: 400px;">click me</div>
+    <div class="big" style="background:#000;height:100px;width:100px;position:absolute;"></div>
+    <h2 style="margin-top:200px;">jQuery animate() - Using Pre-defined Values</h2>
+    <p>You can even specify a property's animation value as "show", "hide", or "toggle":</p>
+    <div class="button">click me</div>
+    <div class="toggle" style="background:#fa0;height:100px;width:100px;position:absolute;"></div>
+    <h2>jQuery animate() - Uses Queue Functionality</h2>
+    <p>
+        By default, jQuery comes with queue functionality for animations.
+        <br>
+        This means that if you write multiple animate() calls after each other, jQuery creates an "internal" queue with
+        these method calls. Then it runs the animate calls ONE by ONE.
+        <br>
+        So, if you want to perform different animations after each other, we take advantage of the queue functionality:
+    </p>
+    <div class="ani">click me</div>
+    <div class="ani" style="background:#fa0;height:100px;width:100px;position:absolute;"></div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
+        // $("button").click(function () {
+        //     $("div").animate({ left: '250px' });
+        // });
+
         $("button").click(function () {
-            $("div").animate({ left: '250px' });
+            $(".op").animate({
+                left: '250px',
+                opacity: '0.5',
+                height: '150px',
+                width: '150px'
+            });
+        });
+
+        $("#button").click(function () {
+            $(".big").animate({
+                left: '250px',
+                height: '+=150px',
+                width: '+=150px'
+            });
+        });
+
+        $(".button").click(function () {
+            $(".toggle").animate({
+                height: 'toggle'
+            });
+        });
+
+        $(".ani").click(function () {
+            var div = $(".ani");
+            div.animate({ height: '300px', opacity: '0.4' }, "slow");
+            div.animate({ width: '300px', opacity: '0.8' }, "slow");
+            div.animate({ height: '100px', opacity: '0.4' }, "slow");
+            div.animate({ width: '100px', opacity: '0.8' }, "slow");
         });
     });
 </script>
