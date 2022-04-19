@@ -24,9 +24,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     function appendText() {
-        var txt1 = "<p>Text.</p>";        // Create text with HTML
-        var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
-        var txt3 = document.createElement("p");
+        let txt1 = "<p>Text.</p>";        // Create text with HTML
+        let txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+        let txt3 = document.createElement("p");
         txt3.innerHTML = "Text.";         // Create text with DOM
         $("body").append(txt1, txt2, txt3);   // Append new elements
     }
