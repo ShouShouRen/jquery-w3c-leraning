@@ -1,10 +1,12 @@
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Get Content - text(), html(), and val()</h2>
     <p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
@@ -13,8 +15,21 @@
         <li>html() - Sets or returns the content of selected elements (including HTML markup)</li>
         <li>val() - Sets or returns the value of form fields</li>
     </ul>
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
 
-
-    <p></p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            alert("Text: " + $("#test").text());
+        });
+        $("#btn2").click(function () {
+            alert("HTML: " + $("#test").html());
+        });
+    });
+</script>
+
 </html>
