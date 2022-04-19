@@ -16,9 +16,20 @@
         <li>val() - Sets or returns the value of form fields</li>
     </ul>
     <p id="test">This is some <b>bold</b> text in a paragraph.</p>
-
     <button id="btn1">Show Text</button>
     <button id="btn2">Show HTML</button>
+    <hr>
+    <p>Name: <input type="text" id="val" value="Mickey Mouse"></p>
+    <button>Show Value</button>
+    <h2>Get Attributes - attr()</h2>
+    <p>
+        The jQuery attr() method is used to get attribute values.
+        <br>>The following example demonstrates how to get the value of the href attribute in a link:
+    </p>
+
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+    <button id="attr">Show href Value</button>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -26,8 +37,20 @@
         $("#btn1").click(function () {
             alert("Text: " + $("#test").text());
         });
+
+
         $("#btn2").click(function () {
             alert("HTML: " + $("#test").html());
+        });
+
+
+        $("button").click(function () {
+            alert("Value: " + $("#val").val());
+        });
+
+
+        $("#attr").click(function () {
+            alert($("#w3s").attr("href"));
         });
     });
 </script>
