@@ -31,14 +31,23 @@
         The following example shows how to add class attributes to different elements. Of course you can select multiple
         elements, when adding classes:
     </p>
-    <button>click me add the class important and color</button>
+    <button id="addclass">click me add the class important and color</button>
+    <h2>jQuery removeClass() Method</h2>
+    <p>
+        The following example shows how to remove a specific class attribute from different elements:
+    </p>
+    <button id="removeclass">click me can remove the class</button>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $("button").click(function () {
+        $("#addclass").click(function () {
             $("h2 , p").addClass("blue");
             $("h2 , p").addClass("important");
+        })
+        $("#removeclass").click(function () {
+            $("h2 , p").removeClass("blue");
+            $("h2 , p").removeClass("important");
         })
     });
 </script>
