@@ -1,0 +1,46 @@
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .important {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    .blue {
+        color: blue;
+    }
+</style>
+
+<body>
+    <h2>jQuery - Get and Set CSS Classes</h2>
+    <p>jQuery has several methods for CSS manipulation. We will look at the following methods:</p>
+    <ul>
+        <li>addClass() - Adds one or more classes to the selected elements</li>
+        <li>removeClass() - Removes one or more classes from the selected elements</li>
+        <li>toggleClass() - Toggles between adding/removing classes from the selected elements</li>
+        <li>css() - Sets or returns the style attribute</li>
+    </ul>
+    <h2>jQuery addClass() Method</h2>
+    <p>
+        The following example shows how to add class attributes to different elements. Of course you can select multiple
+        elements, when adding classes:
+    </p>
+    <button>click me add the class important and color</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $("h2 , p").addClass("blue");
+            $("h2 , p").addClass("important");
+        })
+    });
+</script>
+
+</html>
